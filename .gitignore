@@ -1459,3 +1459,4 @@ UilbiCourse/Production/node_modules/webpack/schemas/plugins/schemes/HttpUriPlugi
 UilbiCourse/Production/node_modules/webpack/schemas/plugins/schemes/HttpUriPlugin.json
 UilbiCourse/Production/node_modules/webpack/schemas/plugins/sharing/SharePlugin.check.js
 UilbiCourse/Production/build/*
+node_modules
