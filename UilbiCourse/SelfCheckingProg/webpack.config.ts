@@ -3,14 +3,20 @@ import { IBuildEnv, IBuildPaths } from "./config/types/IBuildOptions";
 const path = require("path");
 
 const paths: IBuildPaths = {
-  entry: path.resolve(__dirname, "src", "index.tsx"),
+  entry: path.resolve(__dirname, "src", "index.ts"),
   build: path.resolve(__dirname, "build"),
   html: path.resolve(__dirname, "public", "index.html"),
 };
 
-export default (env: IBuildEnv) =>
-  BuildWebpackConfig({
-    mode: env.mode,
-    isDev: env.mode === "development",
-    paths,
-  });
+
+export default (env: IBuildEnv) =>{
+  const mode = env.mode ?? "development";
+  const isDev = mode === "development"; 
+return BuildWebpackConfig({
+  mode: mode,
+  isDev: isDev,
+  paths,
+  port: env.port ?? 3000,
+});
+}
+  

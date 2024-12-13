@@ -14,4 +14,5 @@ export interface IBuildOptions {
   mode: BuildMode;
   isDev: boolean;
   paths: IBuildPaths;
+  port:number
 }

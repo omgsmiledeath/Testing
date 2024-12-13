@@ -2,13 +2,17 @@ import { IBuildOptions } from "./types/IBuildOptions";
 import webpack from "webpack";
 import { buildExtensions } from "./buildExtensions";
 import { buildLoaders } from "./buildLoaders";
+import {} from "webpack-dev-server";
+import { buildDevServer } from "./buildDevServer";
+import { buildPlugins } from "./buildPlugins";
 
 export function BuildWebpackConfig(
   options: IBuildOptions
 ): webpack.Configuration {
   return {
     mode: options.mode,
-    devtool: "inline-source-map",
+    devtool: options.isDev ? "inline-source-map" : undefined,
+    devServer: options.isDev ? buildDevServer(options) : undefined,
     entry: options.paths.entry,
     output: {
       filename: "[name].[contenthash].js",
@@ -17,5 +21,6 @@ export function BuildWebpackConfig(
     },
     resolve: buildExtensions(),
     module: buildLoaders(options),
+    plugins: buildPlugins(options)
   };
 }
