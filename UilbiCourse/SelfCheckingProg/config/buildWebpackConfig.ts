@@ -1,4 +1,3 @@
-import { build } from "vite";
 import { IBuildOptions } from "./types/IBuildOptions";
 import webpack from "webpack";
 import { buildExtensions } from "./buildExtensions";
