@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { CounterComponent } from "./components/Counter";
-import "./index.scss";
+import "./styles/index.scss";
 import { Route, Routes } from "react-router-dom";
 import { MainPageAsync } from "./Pages/MainPage/MainPage.async";
 import { Link } from "react-router-dom";
