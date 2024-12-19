@@ -1,6 +1,14 @@
 import { render } from "react-dom";
-import React from 'react';
-import { CounterComponent } from "./components/Counter";
 import App from "./App";
+import { BrowserRouter } from "react-router-dom";
 
-render(<App />, document.getElementById("root"));
+render(
+  <BrowserRouter
+    future={{
+      v7_relativeSplatPath: true,
+    }}
+  >
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
