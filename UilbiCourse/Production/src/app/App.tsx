@@ -8,10 +8,11 @@ const App = () => {
   const { theme, toggleTheme } = useTheme();
   return (
     <div className={classNames("app", {}, [theme])}>
-      <button onClick={() => toggleTheme()}>CHANGE THEME</button>
-      <h1>Some component after this text.</h1>
       <Navbar />
+      <h1>Some component after this text.</h1>
+
       <AppRouter />
+      <button onClick={() => toggleTheme()}>CHANGE THEME</button>
     </div>
   );
 };
