@@ -1,6 +1,9 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./Navbar.module.scss";
-import { LinkWrapper, LinkWrapperTheme } from "shared/ui/AppLink/LinkWrapper";
+import {
+  LinkWrapper,
+  LinkWrapperTheme,
+} from "shared/ui/LinkWrapper/LinkWrapper";
 interface NavbarProps {
   className?: string;
 }
