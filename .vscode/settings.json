@@ -1,0 +1,6 @@
+{
+  "i18n-ally.localesPaths": [
+    "UilbiCourse/Production/public/locales",
+    "UilbiCourse/Production/src/shared/config/i18n"
+  ]
+}

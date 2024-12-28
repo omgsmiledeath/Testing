@@ -4,11 +4,13 @@ import {
   LinkWrapper,
   LinkWrapperTheme,
 } from "shared/ui/LinkWrapper/LinkWrapper";
+import { useTranslation } from "react-i18next";
 interface NavbarProps {
   className?: string;
 }
 
 export const Navbar = ({ className }: NavbarProps) => {
+  const { t } = useTranslation();
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
       <div className={cls.links}>
@@ -17,10 +19,10 @@ export const Navbar = ({ className }: NavbarProps) => {
           to={"/"}
           className={cls.mainLink}
         >
-          -Main Page-
+          {t("Main Page Link")}
         </LinkWrapper>
         <LinkWrapper theme={LinkWrapperTheme.SECONDARY} to={"/about"}>
-          -About-
+          {t("About Page Link")}
         </LinkWrapper>
       </div>
     </div>
